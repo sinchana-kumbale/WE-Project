@@ -11,6 +11,9 @@ import { theme } from '../core/theme'
 import { emailValidator } from '../helpers/emailValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
 
+
+
+
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState({ value: '', error: '' })
   const [password, setPassword] = useState({ value: '', error: '' })
@@ -18,6 +21,7 @@ export default function LoginScreen({ navigation }) {
   const onLoginPressed = () => {
     const emailError = emailValidator(email.value)
     const passwordError = passwordValidator(password.value)
+
     if (emailError || passwordError) {
       setEmail({ ...email, error: emailError })
       setPassword({ ...password, error: passwordError })
@@ -25,7 +29,7 @@ export default function LoginScreen({ navigation }) {
     }
     navigation.reset({
       index: 0,
-      routes: [{ name: 'Dashboard' }],
+      routes: [{ name: 'Dashboard', params:{user: email.value,username: 'sinch'}}],
     })
   }
 
@@ -57,7 +61,8 @@ export default function LoginScreen({ navigation }) {
       />
       <View style={styles.forgotPassword}>
         <TouchableOpacity
-          onPress={() => navigation.navigate('ResetPasswordScreen')}
+          onPress={() => navigation.navigate('ResetPasswordScreen'
+)}
         >
           <Text style={styles.forgot}>Forgot your password?</Text>
         </TouchableOpacity>
