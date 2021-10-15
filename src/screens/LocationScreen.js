@@ -6,7 +6,7 @@ import Header from '../components/Header'
 import Paragraph from '../components/Paragraph'
 import Button from '../components/Button'
 import SelectDropdown from 'react-native-select-dropdown'
-import {StatusBar, StyleSheet, Text, View,Component,
+import {StatusBar, StyleSheet, Text, TextInput,View,Component,
   AppRegistry,
   ScrollView,
   Dimensions,
@@ -177,8 +177,50 @@ render(){
           region={this.state.mapRegion}
           onRegionChange={this.handleMapRegionChange}
         />
+        <View style={{ position: 'absolute', top: 20, width: '100%' }}>
+    <TextInput
+      style={{
+        borderRadius: 10,
+        margin: 10,
+        color: '#000',
+        borderColor: 'dark pink',
+        backgroundColor: 'transparent',
+        borderWidth: 1,
+        height: 45,
+        paddingHorizontal: 10,
+        fontSize: 18,
+      }}
+      placeholder={'From:'}
+      placeholderTextColor={'darkpink'}
+    />
+    </View>
+    <View style={{ position: 'absolute', top: 65, width: '100%' }}>
+    <TextInput
+      style={{
+        borderRadius: 10,
+        margin: 10,
+        color: '#000',
+        borderColor: 'darkpink',
+        backgroundColor: 'transparent',
+        borderWidth: 1,
+        height: 45,
+        paddingHorizontal: 10,
+        fontSize: 18,
+      }}
+      placeholder={'To:'}
+      placeholderTextColor={'darkpink'}
+    />
+    </View>
+    <View  style = {{position: 'absolute', bottom: 17 , width: '50%' }}>
+    <Button mode = "contained" onPress={() => {this.props.navigation.navigate('TransportDisplayScreen')}}  style = {{borderColor: 'darkpink',
+        backgroundColor: 'transparent' }}>
+        Show me my rides!
+
+      </Button>
+      </View>
         
 </View>
+
   )}
   }
     
