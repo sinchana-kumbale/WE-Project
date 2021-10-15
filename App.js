@@ -10,11 +10,16 @@ import {
   ResetPasswordScreen,
   Dashboard,
   LocationScreen,
+  MapsView,
+  TransportDisplayScreen
 } from './src/screens';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator(
+  );
 
 export default function App() {
+
+  
   return (
     <Provider theme={theme}>
       <NavigationContainer>
@@ -31,7 +36,15 @@ export default function App() {
             name="ResetPasswordScreen"
             component={ResetPasswordScreen}
           />
-          <Stack.Screen name="LocationScreen" component={LocationScreen} />
+          <Stack.Screen name="LocationScreen" component={LocationScreen}  
+ />
+          
+          <Stack.Screen name="TransportDisplayScreen" component={TransportDisplayScreen}  
+ />
+ 
+          <Stack.Screen name="MapsView" component={MapsView}  
+ />
+          
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
