@@ -42,7 +42,7 @@ export default function Dashboard({navigation, route}) {
     <Background>
       <Logo />
       <Header>Welcome { user }
-!</Header>
+</Header>
        <SafeAreaView style={styles.saveAreaViewContainer}>
       <StatusBar backgroundColor="#000" barStyle="light-content" />
       <View style={styles.viewContainer}>
