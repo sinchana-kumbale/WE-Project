@@ -16,6 +16,7 @@ import {StatusBar, StyleSheet, Text, TextInput,View,Component,
 } from "react-native";
 
 
+import BackButton from '../components/BackButton'
 
 
 
@@ -45,7 +46,6 @@ const GOOGLE_MAPS_APIKEY = 'AIzaSyASHWD6B-bcjTO3sm2gZKET-D3vj6Mx3Cg';
     static navigationOptions = {
 title: 'LocationScreen'
     }
-
 
 
 
@@ -170,7 +170,11 @@ async getLocationAsync() {
 
 render(){
   return(
+    
+
+  
 <View style={styles.container}>
+<BackButton goBack = {this.props.navigation.goBack} />
 <MapView
           style={styles.maps}
           provider={PROVIDER_GOOGLE}
