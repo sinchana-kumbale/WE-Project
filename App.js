@@ -11,7 +11,8 @@ import {
   Dashboard,
   LocationScreen,
   MapsView,
-  TransportDisplayScreen
+  TransportDisplayScreen,
+  ThankYou,
 } from './src/screens';
 
 const Stack = createStackNavigator(
@@ -40,6 +41,8 @@ export default function App() {
  />
           
           <Stack.Screen name="TransportDisplayScreen" component={TransportDisplayScreen}  
+ />
+ <Stack.Screen name="ThankYou" component={ThankYou}  
  />
  
           <Stack.Screen name="MapsView" component={MapsView}  
