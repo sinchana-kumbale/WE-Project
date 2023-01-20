@@ -16,10 +16,6 @@ The Features that are currently incorporated or in the works include :
 > Currently only for Bangalore, but in the works for other cities.
 -  A final Thank you page for the user 
 
-## Try our App : 
 
-Feel free to try out our app using [this link](https://snack.expo.dev/@sinchana_kumbale/inmobile-we3project)
-
-This can be run on the web browser or on the Expo Go app.
 
 For any suggestions or queries, [Contact Us](mailto:sinchana.kumbale@gmail.com)
